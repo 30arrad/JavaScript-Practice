@@ -143,3 +143,4 @@ else if (Score >= 50 && Score <=59) {
 }
 
 console.log(Grade);
+
