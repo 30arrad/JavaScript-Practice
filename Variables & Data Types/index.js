@@ -1,3 +1,5 @@
+console.log("Variables & Data Types");
+
 // console.log("Hello World");
 // console.log("Arrad Ahmed");
 
