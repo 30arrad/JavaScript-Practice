@@ -1,0 +1,76 @@
+/* Basic reset and styling */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  aside {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  aside h2 {
+    text-align: center;
+  }
+  
+  aside nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  aside nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  aside nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  form label, form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
