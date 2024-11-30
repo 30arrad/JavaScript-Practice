@@ -1,4 +1,4 @@
-console.log("Hello World");
+// console.log("Hello World");
 
 let s = 100;
 
@@ -23,19 +23,19 @@ else{
 let age = 15;
 let isMarried = (age >= 18)? "is Married" : "Not Married";
 
-console.log(isMarried);
+// console.log(isMarried);
 
 // for loop
 
 for (let i = 0; i < 5; i++) {
-    console.log(`number ${i}`);
+    // console.log(`number ${i}`);
 }
 
 //while loop
 
 let j =5;
 while (j < 10) {
-    console.log(`number ${j}`);
+    // console.log(`number ${j}`);
     j++;
 }
 
