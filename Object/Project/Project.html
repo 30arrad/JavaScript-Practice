@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .task.completed {
+            background-color: #d4edda;
+            text-decoration: line-through;
+        }
+        .add-task-form input, .add-task-form button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .task button {
+            background-color: #f8d7da;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .task button:hover {
+            background-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form class="add-task-form">
+        <input type="text" id="task-name" placeholder="Enter task name" required>
+        <input type="date" id="due-date" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <h2>Your Tasks</h2>
+    <div id="task-list"></div>
+    <script src="Project.js"></script>
+</body>
+</html>
