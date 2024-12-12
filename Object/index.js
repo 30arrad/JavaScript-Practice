@@ -75,3 +75,48 @@ const Book = {
 
 // Object Destructuring --- You can extract values from an object into variables using destructuring.
 
+
+const laptop = {
+    Brend: "HP",
+    Model: "PAVILION",
+    Price: 72000,
+};
+
+const {Brend, Model, Price} = laptop;
+
+// console.log(Brend);
+// console.log(Model);
+// console.log(Price);
+
+
+
+// ***********************************************************************************
+
+// Looping Through an Object --- Use a for...in loop to iterate over an object's properties.
+
+const Books = {
+    Name: " Love Life",
+    Price: 999,
+};
+
+for(let key in Books) {
+    // console.log(`${key}: ${Books[key]}`)
+};
+
+
+
+// ***********************************************************************************
+
+// Object Methods: Keys, Values, and Entries --- Use Object.keys(), Object.values(), or Object.entries() for easier property management.
+
+const Arrad = {
+    Age: 21,
+    Height: "5.5 Feet",
+    Weight: "45 Kg",
+};
+
+console.log(Object.keys(Arrad));
+console.log(Object.values(Arrad));
+console.log(Object.entries(Arrad));
+
+// Object.keys(), Object.values(), or Object.entries()
