@@ -108,15 +108,20 @@ for(let key in Books) {
 // ***********************************************************************************
 
 // Object Methods: Keys, Values, and Entries --- Use Object.keys(), Object.values(), or Object.entries() for easier property management.
+const MySYM = Symbol("key1");
 
 const Arrad = {
     Age: 21,
     Height: "5.5 Feet",
     Weight: "45 Kg",
+    [MySYM]: "arradKey1",
 };
 
-console.log(Object.keys(Arrad));
-console.log(Object.values(Arrad));
-console.log(Object.entries(Arrad));
+// console.log(Object.keys(Arrad));
+// console.log(Object.values(Arrad));
+// console.log(Object.entries(Arrad));
+
+// console.log(Arrad);
 
 // Object.keys(), Object.values(), or Object.entries()
+
