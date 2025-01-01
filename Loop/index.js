@@ -11,7 +11,7 @@ for (const num of number) {
     smalnum.push(num);
 }
 
-console.log(smalnum);
+// console.log(smalnum);
 
 
 
@@ -27,8 +27,52 @@ function bal () {
     let ac =12
     let ab = 12
 
-    return console.log(as +ac+ab)
+    // return console.log(as +ac+ab)
 }
 
 
-bal();
+// bal();
+
+
+
+const Mynums = [1, 2, 3, 4, 5];
+
+const val =Mynums.filter( (num) => num > 2 ) ;
+
+console.log(val);
+
+
+const Myitems = [
+    {
+        name: "Arrad",
+        price: 100
+
+    },
+
+    {
+        name: "Arrad2",
+        price: 200
+
+    },
+    {
+        name: "Arrad3",
+        price: 300
+
+    },
+    {
+        name: "Arrad4",
+        price: 400
+
+    },
+    {
+        name: "Arrad5",
+        price: 500
+
+    },
+    
+]
+
+
+const totalPrice = Myitems.reduce( (acc, num) => (acc + num.price), 0 )
+
+console.log(totalPrice);
