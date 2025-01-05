@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Challenges</title>
+  <style>
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+    .new-class {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="heading">DOM Challenges</h1>
+  <button id="changeTextButton">Change Text</button>
+  <div id="content">
+    <p class="paragraph">This is a paragraph.</p>
+    <p class="paragraph">This is another paragraph.</p>
+  </div>
+  <button id="addElementButton">Add New Element</button>
+
+  <script>
+    // 1. Selecting Elements
+    const heading = document.querySelector('#heading');
+    const paragraphs = document.querySelectorAll('.paragraph');
+    const contentDiv = document.getElementById('content');
+
+    // 2. Manipulating DOM Elements
+    const changeTextButton = document.getElementById('changeTextButton');
+    changeTextButton.addEventListener('click', () => {
+      heading.textContent = 'Text Changed!';
+      heading.classList.add('highlight');
+    });
+
+    // 3. Handling Events
+    paragraphs.forEach((para, index) => {
+      para.addEventListener('click', () => {
+        alert(`You clicked paragraph ${index + 1}`);
+      });
+    });
+
+    // 4. Creating and Appending Elements
+    const addElementButton = document.getElementById('addElementButton');
+    addElementButton.addEventListener('click', () => {
+      const newElement = document.createElement('p');
+      newElement.textContent = 'This is a dynamically added paragraph!';
+      newElement.classList.add('new-class');
+      contentDiv.appendChild(newElement);
+    });
+
+    // 5. Traversing the DOM
+    console.log('Parent of heading:', heading.parentNode);
+    console.log('First paragraph:', contentDiv.firstElementChild);
+    console.log('Next sibling of heading:', heading.nextElementSibling);
+  </script>
+</body>
+</html>

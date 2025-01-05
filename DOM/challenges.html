@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM challenges </title>
+    <style>
+        body {
+            background: #000;
+            color: aliceblue;
+            text-align: center;
+        }
+        h1 {
+            color: blue;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <h1>Task 1</h1>
+    <hr>
+<!-- Task 1:
+Use JavaScript to change the text of the <h1> when the button is clicked. -->
+
+    <h2 id="title">Original Title</h2>
+    <button id="changeTextButton">Change Title</button>
+
+
+    <hr>
+    <h1>Task 2</h1>
+    <hr>
+ <!-- Task 2:
+When the button is clicked, use JavaScript to add a highlight class to all paragraphs, changing their color to blue.       -->
+
+    <div id="content">
+        <p>First paragraph.</p>
+        <p>Second paragraph.</p>
+        <p>Third paragraph.</p>
+      </div>
+      <button id="highlightButton">Highlight Paragraphs</button>
+     
+
+      <hr>
+      <h1>Task 3</h1>
+      <hr>
+<!-- Task 3:
+When the button is clicked, dynamically add a new list item (<li>Item 3</li>) to the unordered list.       -->
+
+      <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      <button id="addItemButton">Add Item</button>
+
+
+      <hr>
+      <h1>Task 4</h1>
+      <hr>
+<!-- Task 4:
+Use JavaScript to toggle the visibility of the paragraph (<p>) when the button is clicked. -->
+
+      <p id="toggleParagraph">This paragraph should be shown or hidden.</p>
+      <button id="toggleButton">Toggle Visibility</button>
+
+
+      <hr>
+      <h1>Task 5</h1>
+      <hr>
+<!-- Task 5:
+When the form is submitted, display the input value inside the <p> tag without reloading the page. -->
+
+    <form id="userForm">
+        <input type="text" id="userName" placeholder="Enter your name" />
+        <button type="submit">Submit</button>
+    </form>
+    <p id="displayName"></p>
+
+
+        
+        
+</body>
+</html>
