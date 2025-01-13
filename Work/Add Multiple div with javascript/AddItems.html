@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Modal Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+  <!-- Product List -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Example of 10 items -->
+    <div class="card border rounded-lg p-4 bg-white shadow" data-id="1" data-name="Premium T-shirt - Black" data-image="https://via.placeholder.com/100">
+      <img src="https://via.placeholder.com/100" alt="Product Image" class="w-full h-24 object-cover">
+      <p class="mt-2 font-bold">Premium T-shirt - Black</p>
+      <button class="addToCartBtn bg-blue-500 text-white px-4 py-2 mt-2 rounded hover:bg-blue-600">Add to Cart</button>
+    </div>
+    <div class="card border rounded-lg p-4 bg-white shadow" data-id="2" data-name="Premium T-shirt - Red" data-image="https://via.placeholder.com/100">
+      <img src="https://via.placeholder.com/100" alt="Product Image" class="w-full h-24 object-cover">
+      <p class="mt-2 font-bold">Premium T-shirt - Red</p>
+      <button class="addToCartBtn bg-blue-500 text-white px-4 py-2 mt-2 rounded hover:bg-blue-600">Add to Cart</button>
+    </div>
+    <!-- Repeat the above block for 10 products -->
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg w-96">
+      <!-- Modal Header -->
+      <div class="flex justify-between items-center border-b px-4 py-2">
+        <h2 class="text-lg font-bold">Product Details</h2>
+        <button id="closeModalBtn" class="text-gray-600 hover:text-gray-900">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4">
+        <!-- Product Details -->
+        <div id="modalContent">
+          <img id="modalImage" src="" alt="Product" class="w-24 h-24 object-cover rounded mx-auto">
+          <p id="modalTitle" class="text-center font-medium mt-2"></p>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="flex justify-between px-4 py-2 border-t">
+        <button id="cancelBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancel</button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Get modal and buttons
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+
+    // Get modal elements
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+
+    // Function to open modal and populate with dynamic data
+    function openModal(productName, productImage) {
+      modalImage.src = productImage;
+      modalTitle.textContent = productName;
+      modal.classList.remove('hidden');
+    }
+
+    // Function to close modal
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    // Add click event to all "Add to Cart" buttons
+    addToCartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.card');
+        const productName = card.getAttribute('data-name');
+        const productImage = card.getAttribute('data-image');
+        openModal(productName, productImage);
+      });
+    });
+
+    // Close modal on clicking close buttons or background
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+  </script>
+</body>
+</html>
